@@ -29,10 +29,12 @@
 
 #include <openssl/bn.h>
 
+#include "libqtelegram_global.h"
+
 Q_DECLARE_LOGGING_CATEGORY(TG_CORE_OUTBOUNDPKT)
 
 class Settings;
-class OutboundPkt
+class LIBQTELEGRAMSHARED_EXPORT OutboundPkt
 {
 public:
     explicit OutboundPkt(Settings *settings);

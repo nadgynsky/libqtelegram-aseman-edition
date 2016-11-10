@@ -27,9 +27,11 @@
 
 #include <openssl/bn.h>
 
+#include "libqtelegram_global.h"
+
 Q_DECLARE_LOGGING_CATEGORY(TG_CORE_INBOUNDPKT)
 
-class InboundPkt
+class LIBQTELEGRAMSHARED_EXPORT InboundPkt
 {
 public:
     explicit InboundPkt(char* buffer, qint32 len);
