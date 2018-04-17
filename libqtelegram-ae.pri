@@ -47,7 +47,8 @@ SOURCES += \
     $$PWD/core/session.cpp \
     $$PWD/core/dcauth.cpp \
     $$PWD/telegram.cpp \
-    $$PWD/file/uploadfileengine.cpp
+    $$PWD/file/uploadfileengine.cpp \
+    $$PWD/core/proxyoptions.cpp
 
 HEADERS += \
     $$PWD/util/cryptoutils.h \
@@ -84,4 +85,5 @@ HEADERS += \
     $$PWD/core/dc.h \
     $$PWD/telegram.h \
     $$PWD/libqtelegram_global.h \
-    $$PWD/file/uploadfileengine.h
+    $$PWD/file/uploadfileengine.h \
+    $$PWD/core/proxyoptions.hpp

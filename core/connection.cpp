@@ -23,12 +23,15 @@
 #include "util/constants.h"
 
 #include <QTimer>
+#include <QNetworkProxy>
 
 #ifdef Q_OS_LINUX
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <netinet/tcp.h>
 #endif
+
+#include "proxyoptions.hpp"
 
 Q_LOGGING_CATEGORY(TG_CORE_CONNECTION, "tg.core.connection")
 
@@ -45,6 +48,8 @@ Connection::Connection(const QString &host, qint32 port, QObject *parent) :
     connect(this, &QTcpSocket::stateChanged, this, &Connection::onStateChanged);
 
     connect(&mAsserter, &Asserter::fatalError, this, &Connection::fatalError);
+
+    setProxy(ProxyOptions::getProxySettings());
 }
 
 Connection::~Connection() {
