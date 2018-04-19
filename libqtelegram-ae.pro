@@ -14,8 +14,6 @@ macx {
     CONFIG += staticlib
 }
 
-include(localconf.pri)
-
 include(libqtelegram-ae.pri)
 
 linux {

@@ -2,6 +2,8 @@ QT += gui
 QT += network
 QT += multimedia
 
+include(localconf.pri)
+
 win32 {
     isEmpty(OPENSSL_LIB_DIR): OPENSSL_LIB_DIR = $${DESTDIR}
     isEmpty(OPENSSL_INCLUDE_PATH): OPENSSL_INCLUDE_PATH = $${DESTDIR}/include
@@ -87,3 +89,5 @@ HEADERS += \
     $$PWD/libqtelegram_global.h \
     $$PWD/file/uploadfileengine.h \
     $$PWD/core/proxyoptions.hpp
+
+QMAKE_CXXFLAGS += -Wno-c++11-narrowing
